@@ -1,0 +1,173 @@
+html{
+  margin: 0;
+  padding: 0;
+  color: black;
+} 
+body{
+  margin: 0;
+  padding: 0; 
+}
+.container{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "main main main main"
+  "nav nav nav nav"
+  "content1 content1 content1 content1"
+  "footer footer footer footer";
+}
+main{
+  grid-area: main;
+}
+.parent{
+  position: relative;
+}
+.gameImage{
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  float: left;
+  opacity: 0.5;
+}
+#Logo{
+  height: 530px;
+}
+.logo{
+  position: absolute;;
+  text-align: center;
+  right: 0%;
+  left:0%;
+  bottom: -600px;
+}
+
+
+
+nav{
+  grid-area: nav;
+  background-color: #1f2226;
+}
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 33.33%;
+  text-align: center;
+}
+.navbar a:hover{
+  background-color: #407bd2;
+}
+.navbar #nothing:hover{
+  background-color: black;
+}
+.RoadMap-Container{
+  display:inline-block;
+  grid-area: content1;
+  background-color: #1f2226;
+  color: #cfd6da;
+  font-weight: bold;
+}
+.RoadMapDevlopment{
+  border-radius: 20px;
+  width: auto;
+  height: auto;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: larger ;
+  background-color: #242c36;
+}
+
+.RoadMapDevlopment small{
+  color: #999ea0;
+}
+
+
+
+
+
+
+footer{
+  background-color: black;
+  grid-area: footer;
+  text-align: center;
+  height: auto;
+}
+.footer {
+  width: 100%;
+  background-color: black;
+}
+.footer a{
+  float: left;
+  color: #3f4142;
+  text-decoration: none;
+  font-size: 17px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 25%;
+}
+
+@media only screen and (max-width:550px){
+  .container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.8fr 0.2fr 1fr auto;
+      grid-template-areas: 
+      "main"
+      "nav"
+      "content1"
+      "footer"
+      ;
+  }
+  .footer a {
+      text-decoration: none;
+      font-size: 17px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      width: 100%;
+    }
+    #Logo{
+      height: 250px;
+    }
+    .logo{
+      bottom: -500px;
+    }
+    .games a{
+      width: 100%;
+    }
+    .RoadMapDevlopment{
+      width: auto;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+}
+
+@media only screen and (max-height:750px){
+  .gameImage{
+    height: 600px;
+  }
+
+  .logo{
+    bottom: -450px;
+  }
+}
+
+@media only screen and (max-height:750px) and (min-width:550px){
+  .logo{
+    bottom: -550px;
+  }
+}
+
+
+
