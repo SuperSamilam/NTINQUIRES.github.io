@@ -1,0 +1,61 @@
+*{
+    background-color:hotpink;
+}
+
+.Question{
+    display: block;
+}
+.Yes{
+    display: none;
+}
+.No{
+    display: none;
+}
+img{
+    width: 50%;
+    height: 50%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.container-item{
+    margin: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: black;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .buttonYes:active{
+    background-color: #80cd83;
+  }
+  .buttonNo:active{
+    background-color: #f093b2;
+  }
+  .buttonYes:hover {background-color: #80cd83}
+  .buttonNo:hover {background-color: #f093b2}
+
+  @media only screen and (max-width: 600px) {
+    img{
+        width: 100%;
+        height: 100%;
+    }
+  }
